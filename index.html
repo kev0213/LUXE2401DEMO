@@ -124,31 +124,24 @@
       <div class="row justify-content-center mt-md-5 mt-3 mb-0 js-PC js-navlight_content no-gutters LUXEOverflow">
         <div class="col-12"><img class="" src="images/02BOM_title.png"></div>
       </div>
-      <div class="row justify-content-center mb-3 LUXE02BOM ">
+        <!-- 測試時間設定至DIV是否正常作用 -->
+
+      <div class="row justify-content-center mb-3 LUXE02BOM " style="display:none;"
+        data-TimeSwitch_start="2024/01/17 13:00:00" data-TimeSwitch_end="2024/01/22 24:00:00"
+        data-TimeSwitch_Myswitch="1">
         <div class="col-6 m-0 p-0 align-bottom my-1 animate__fadeInUp animate__animated wow">
           <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6857629" target="_blank">
-            <img class="" src="images/02BOMA.png" title="小黑瓶50ml" style="display:none;">
+            <img class="" src="images/02BOMA.png" title="小黑瓶50ml">
           </a>
         </div>
         <div class="col-6 m-0 p-0 align-bottom my-1 animate__fadeInUp animate__animated wow">
           <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12107319" target="_blank">
-            <img class="" src="images/02BOMB.png" title="冰河醣蛋白保濕霜" style="display:none;"
-              data-TimeSwitch_start="2024/01/17 13:00:00" data-TimeSwitch_end="2024/01/22 24:00:00"
-              data-TimeSwitch_Myswitch="1">
+            <img class="" src="images/02BOMB.png" title="冰河醣蛋白保濕霜">
           </a>
         </div>
-        <!-- 測試時間設定至DIV是否正常作用 -->
         <div class="col-6 m-0 p-0 align-bottom my-1 animate__fadeInUp animate__animated wow">
           <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6820622" target="_blank">
-            <img class="" src="images/02BOMC_1922.png" title="輕粉底限時組" style="display:none;"
-              data-TimeSwitch_start="2024/01/17 13:00:00" data-TimeSwitch_end="2024/01/22 24:00:00"
-              data-TimeSwitch_Myswitch="1">
-            <img class="" src="images/02BOMC_2328.png" title="輕粉底限時組" style="display:none;"
-              data-TimeSwitch_start="2024/01/23 13:00:00" data-TimeSwitch_end="2024/01/28 24:00:00"
-              data-TimeSwitch_Myswitch="1">
-            <img class="" src="images/02BOMC_2931.png" title="輕粉底限時組" style="display:none;"
-              data-TimeSwitch_start="2024/01/29 13:00:00" data-TimeSwitch_end="2024/02/28 24:00:00"
-              data-TimeSwitch_Myswitch="1">
+            <img class="" src="images/02BOMC_1922.png" title="輕粉底限時組">
           </a>
         </div>
         <div class="col-6 m-0 p-0 align-bottom my-1 animate__fadeInUp animate__animated wow">
@@ -980,25 +973,17 @@
         console.log('TimeSwitch_now ' + TimeSwitch)
         if (Myswitch == 0) {
           if (Mydate_start <= TimeSwitch && TimeSwitch <= Mydate_end) {
-            $self.css('display', 'none'); //Myswitch:0, 時間內,刪除
-            $self.css('visibility', 'none'); //Myswitch:0, 時間外,打開
-
+            $self.remove(); //Myswitch:0, 時間內,刪除
           } else {
-            $self.css('display', 'inline-block'); //Myswitch:0, 時間外,打開
-            $self.css('visibility', 'visible'); //Myswitch:0, 時間外,打開
-
-
+            $self.show(); //Myswitch:0, 時間外,打開
           }
         }
         //Myswitch = 1 打開
         if (Myswitch == 1) {
           if (Mydate_start <= TimeSwitch && TimeSwitch <= Mydate_end) {
-            $self.css('visibility', 'visible'); //Myswitch:0, 時間外,打開
-            $self.css('display', 'inline-block'); //Myswitch:0, 時間外,打開
-
+            $self.show(); //Myswitch:1, 時間內,打開
           } else {
-            $self.css('visibility', 'none'); //Myswitch:0, 時間外,打開
-            $self.css('display', 'none'); //Myswitch:0, 時間內,刪除
+            $self.remove(); //Myswitch:1, 時間外,刪除
           }
         }
       });
