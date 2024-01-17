@@ -274,10 +274,12 @@ body {
 
 .LUXE02BOM .col-6:nth-child(even) img {
 	margin-left: -30%;
+	z-index: 99;
 }
 
 .LUXE02BOM .col-6:nth-child(odd) img {
 	margin-right: -20%;
+	z-index: 98;
 }
 
 .LUXE02BOM,
