@@ -1,0 +1,305 @@
+@charset "utf-8";
+body {
+	/* 全頁面背景 */
+	background-color: #ffffff;
+	background-image: url(00BG.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	user-select: none;
+	/* standard syntax */
+	-webkit-user-select: none;
+	/* for Chrome、Safari */
+	-moz-user-select: none;
+	/* for Mozilla、Firefox */
+
+
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		background-position: center;
+		background-image: url(00BGm.jpg);
+		/* background-image: none; */
+		background-size: 110vw;
+		background-attachment: scroll;
+		background-repeat: repeat;
+		background-color: #b52d2b;
+	}
+
+	.WRAPPER {
+		background-image: none;
+	}
+}
+
+/* 全域圖片滿版 */
+.container {
+	max-width: 1220px;
+}
+
+.container img,
+.container-fluid img {
+	width: 100%;
+	-webkit-user-drag: none;
+
+}
+.swiperPD {
+	position: relative;
+	z-index: 2;
+}
+
+.fadeswiper {
+	overflow: visible;
+
+}
+
+.LUXEswiper {
+	/* overflow: hidden; */
+	overflow: visible;
+	position: relative;
+	bottom: 0;
+	left: 15%;
+	width: 70%;
+	--swiper-theme-color: #fff;
+	--swiper-navigation-color: #fff;
+	--swiper-navigation-size: 30px;
+}
+
+.swiper-pagination {
+	width: 100%;
+	left: 0%;
+	bottom: 10%;
+	/* --swiper-pagination-color: #cf0000; */
+}
+
+.swiper-wrapper {
+	padding-bottom: 5%;
+}
+
+
+
+@media screen and (max-width: 1220px) {
+	.LUXEswiper {
+		left: 10%;
+		width: 80%;
+	}
+}
+
+.LUXEswiper .swiper-slide img {
+	opacity: 0;
+	filter: brightness(.5);
+	transition: ease .5s;
+}
+
+.LUXEswiper .swiper-slide-prev img,
+.LUXEswiper .swiper-slide-next img {
+	opacity: 1;
+}
+
+.LUXEswiper .swiper-slide-active img {
+	opacity: 1;
+	filter: brightness(1);
+
+}
+
+.swiper-pagination-bullet-active {
+	opacity: 1;
+	background: #fff;
+}
+
+.LUXEancorBTN img {
+	transition-duration: .2s;
+}
+
+.LUXEancorBTN img:hover {
+	opacity: 1;
+	transform: scale(.98);
+	transition-duration: .2s;
+}
+
+@media screen and (max-width: 768px) {
+	.LUXEswiper {
+		/* overflow: hidden; */
+		left: 0%;
+		width: 100%;
+
+	}
+
+	.swiper-wrapper {
+		height: auto;
+	}
+
+	.swiper-pagination {
+		bottom: 5%;
+	}
+
+	.swiper-wrapper {
+		min-height: 50vw;
+	}
+
+}
+.LUXEBN .PD_wrapper {
+	padding: 0 !important;
+}
+
+.bt_2_layout_new .bt_2_layout_Content {
+	float: none;
+}
+
+/*html標籤新增prdImgWrap裡面時的樣式*/
+.prdImgWrap {
+	position:
+		relative;
+}
+
+.prdImgWrap .imgTag,
+.prdImgWrap .imgTagBottom,
+.prdImgWrap .imgTagRectangle {
+	height:
+		auto;
+	display: block;
+	position: absolute;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index:
+		2;
+	pointer-events:
+		none;
+}
+
+.prdImgWrap .imgTag {
+	width:
+		28%;
+	top:
+		0;
+}
+
+.prdImgWrap .imgTagRectangle {
+	width:
+		75%;
+	top: 0;
+}
+
+.prdImgWrap .imgTagBottom {
+	width:
+		100%;
+	bottom:
+		0;
+}
+
+.prdImgWrap .imgTag img,
+.prdImgWrap .imgTagBottom img,
+.prdImgWrap .imgTagRectangle img {
+	width:
+		100% !important;
+	height: auto;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border-radius:
+		0px !important;
+	max-width:
+		none !important;
+}
+
+/*html標籤新增prdGoodsImgWrap裡面時的樣式*/
+.prdGoodsImgWrap .imgTag,
+.prdGoodsImgWrap .imgTagBottom,
+.prdGoodsImgWrap .imgTagRectangle {
+	height:
+		auto;
+	display: block;
+	position: absolute;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index:
+		2;
+	pointer-events:
+		none;
+}
+
+.prdGoodsImgWrap .imgTag {
+	width:
+		28%;
+	top:
+		0;
+}
+
+.prdGoodsImgWrap .imgTagRectangle {
+	width:
+		75%;
+	top: 0;
+}
+
+.prdGoodsImgWrap .imgTagBottom {
+	width:
+		100%;
+	bottom:
+		0;
+}
+
+.prdGoodsImgWrap .imgTag img,
+.prdGoodsImgWrap .imgTagBottom img,
+.prdGoodsImgWrap .imgTagRectangle img {
+	width:
+		100% !important;
+	height: auto;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border-radius:
+		0px !important;
+	max-width:
+		none !important;
+}
+.container {
+	max-width: 1200px;
+}
+
+.container img,
+.container-fluid img {
+	width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+	.PD_layout-D2_1f4s .PD_layout-D2_1f4s-PD {
+		/* MB帶品無間距 */
+		margin-bottom: 0;
+		background: none;
+	}
+}
+
+.LUXE02BOM .col-6:nth-child(even) img {
+	margin-left: -30%;
+}
+
+.LUXE02BOM .col-6:nth-child(odd) img {
+	margin-right: -20%;
+}
+
+.LUXE02BOM,
+.LUXEOverflow {
+	width: 100%;
+	margin-left: 0%;
+}
+
+.LUXE02BOM img:hover {
+	transform: scale(.98);
+	transition-duration: .2s;
+}
+
+.LUXE02BOM img {
+	transition-duration: .2s;
+}
+
+@media screen and (max-width: 767px) {
+
+	.LUXE02BOM,
+	.LUXEOverflow {
+		width: 136%;
+		margin-left: -18%;
+	}
+}
